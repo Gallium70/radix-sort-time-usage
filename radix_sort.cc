@@ -75,6 +75,7 @@ void RadixSortBenchmark(uint32_t arr[], size_t n, uint32_t seed,
 }
 
 int main(void) {
+  // 随机数种子和待排序的数据数量，可自行修改
   uint32_t seed = 20210311;
   size_t n = 2e8;
   // cin >> n >> seed;
