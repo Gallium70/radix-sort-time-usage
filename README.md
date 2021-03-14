@@ -10,7 +10,7 @@
 
 原始题目出处见 [LibreOJ #2286.「WC2017」挑战](https://loj.ac/p/2286) 任务一，本项目使用了和其模板程序相同的数据生成方法，即给定一个伪随机数生成器，输入初始种子和数据数量，生成待排序的数据。这样可以避免从硬盘中读取大量数据消耗的时间。
 
-[评测鸭提交记录 16009](https://duck.ac/submission/16009)
+固定选择基为256，进行了若干优化(常量替换、循环展开、用静态数组替换动态数组、乒乓缓冲区等)后，在[评测鸭平台的运行时间](https://duck.ac/submission/16009)为867.413 ms。
 
 ## 编译指令
 
@@ -19,7 +19,7 @@
 ## 文件内容
 
 - [radix_sort.cc](radix_sort.cc): 源代码
-- [radix_sort_duck.cc](radix_sort_duck.cc): 在评测鸭上提交的代码，固定选择基为256，为了提高运行速度进行了少许优化
+- [radix_sort_duck.cc](radix_sort_duck.cc): 在评测鸭上提交的代码
 - [radix_sort_time.csv](radix_sort_time.csv): 不同基数下的总排序时间和每轮排序消耗的时间
 
 ## 注意事项
